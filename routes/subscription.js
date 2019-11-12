@@ -23,7 +23,7 @@ router.post('/', function(req, res){
         // error: redirect back to form with fail message
         if(err) {
             console.log(err);
-            req.flash('subFailMsg', 'Sorry, Something went wrong while register your subscription.');
+            req.flash('subFailMsg', 'Sorry, Something went wrong while register your subscription. Please, try again.');
             res.redirect('/subscription');
         }
 
