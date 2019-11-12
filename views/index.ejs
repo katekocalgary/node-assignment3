@@ -1,0 +1,30 @@
+<!-- Include header  -->
+<%- include partials/header %>
+
+<!-- Body contents area -->
+        <section class="section">
+            <div class="container">
+                <div class="intro">
+                    <h1>Kate Ko is..</h1>
+                    <p>10 years experience as a Web Designer and Project Manager, PMP certified, worked in the mobile and web industry.<br> Skilled in UX strategy experience, including: requirement gathering, prototyping, project management, <br> and quality assurance. Strong problem-solving abilities. Can work under pressure within challenging environments.
+                    </p>
+                </div>  
+                <!-- Display subscription success message -->     
+                    <% if (messages.subSccessMsg) { %>
+                    <div class="subMessage"><p class="message-text">  <%= messages.subSccessMsg %></p>
+                        <div id="message-close"><a href="#" ><img src ="./img/close.svg"></a></div>
+                    </div>
+                    <% } %>         
+            </div>
+            <div class="container">
+                <div class='card-row' id='content'>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- Include js file link for displaying Tile UI and contents-->
+<%- include partials/mainJS %>
+
+<!-- Include footer -->
+<%- include partials/footer %>

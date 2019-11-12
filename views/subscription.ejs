@@ -1,0 +1,39 @@
+<!-- Include header  -->
+<%- include partials/header %>
+        <!-- Displays the submitted name and email START-->
+        <section class="subscription">
+            <h1>Subscribe Now</h1>
+            <!-- Display subscription fail message -->
+                <% if (messages.subFailMsg) { %>
+                <div class="subMessage"><p class="message-text">  <%= messages.subFailMsg %></p>
+                    <div id="message-close"><a href="#" ><img src ="./img/close.svg"></a></div>
+                </div>
+                <% } %>    
+                <!-- newsletter subscription form area -->
+                <form action="../subscription" method="post">
+                    <fieldset>
+                        <legend class="legend">Get notified about the next update</legend>
+                        <div class="form">
+                            <div class="name">
+                                <label for="name">Name</label>               
+                                <input id="name" type="text" name="name" placeholder="Name" required minlength="4" maxlength="20">
+                            </div>
+                            <div class="email">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" name="email" placeholder="E-mail" maxlength="50" >
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="adult" value="true" required> I confirm that I am over 18 years old and I accept adult contents.
+                            </div>
+                            <div class="button">
+                                <button type="submit" id="submit" class="submit" value="submit"> Subscribe</button> 
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+    
+<!-- Include footer -->    
+<%- include partials/footer %>
+<!-- Include js file link for displaying message layer-->
+<%- include partials/subscriptionJS %>

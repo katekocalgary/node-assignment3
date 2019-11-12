@@ -1,0 +1,66 @@
+<!-- Include header  -->
+<%- include partials/header %>
+
+        <!-- Body contents area -->
+        <div class="container">
+            <p class = "description"> Kate's sample product | Calgary Crime Dash Board using API. </p>
+            <!-- Search community crime info area -->
+            <div class = "search">
+            <form action="" method="get" class="search-form">
+                <input name="keyword" type="text" class="searchTerm" id="keyword" placeholder="COMMUNITY (e.g. CITADEL)">
+                <button type='submit' id='submit'class="searchButton">search</button>
+                <div id='form-status'> </div>
+            </form>
+            </div>
+            <!-- Display search result Layer --> 
+            <div class="searchResult">
+            <h2 class="communityTitle"></h2>
+            <div class="resultBox" id="resultBox1">
+                <ul class = "searchList1"><p>Crime counts & Resident counts</p></ul>
+            </div>
+            <div class="resultBox" id="resultBox2">
+                <ul class = "searchList2"><p>Crime counts by categery</p></ul>
+            </div>
+            <div id="layer-close"><a href="#" ><img src ="./img/close.svg"></a></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Display calgary crime total counts --> 
+            <div class = "totalTitle">Calgary crime counts</div>
+            <div class = "total"></div>
+            <div class = "totalDate">Jan.2019 - Sept.2019</div>
+
+            <!-- Display calgary crime Top 5 by sector, community, and category --> 
+            <div class = "topview">
+                <div class = "box" id="box1"> 
+                    <div class = "title">Sector Top 5</div>
+                    <div class = "list">
+                        <ul class= "sector"></ul>
+                    </div>
+                </div>
+                <div class = "box" id="box2"> 
+                    <div class = "title">Community Top 5</div>
+                    <div class = "list">
+                        <ul class= "community"></ul>
+                    </div>
+                </div>
+                <div class = "box" id="box3">  
+                    <div class = "title">Category Top 5</div>
+                    <div class = "list">
+                        <ul class= "category"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="apiDescription">
+                <p>API from <em>https://data.calgary.ca</em></p>
+        </div>
+    </div>
+
+<!-- Include js file link for displaying data using API-->
+<%- include partials/crimeJS %>
+
+<!-- Include footer -->    
+<%- include partials/footer %>

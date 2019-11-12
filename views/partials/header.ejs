@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= page %> </title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+    <div class = "wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <a href = "/index" title="home"><div class="logo"></div></a>
+                <!-- display Navigation data START -->
+                <ul>
+                    <% menu.forEach(function(item) { %>
+                        <li><a href="/<%= item.link %>" title ="<%= item.title %>"> <%= item.label %></a></li>
+                        <% }) %>
+                </ul>
+                <!-- display Navigation data END -->
+            </div>
+        </nav>
+
+
